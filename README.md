@@ -16,9 +16,6 @@ My GSoC project focused on **Making the Mobile Wallet Deployment-Ready for G2P a
 - [Mifos Passcode CMP (KMP library)](#mifos-passcode-cmp)
 - [Fineract Client KMP SDK](#fineract-client-kmp-sdk)
 
-####
-</details>
-
 ## Mobile Wallet
 
 **Repo:** [`openMF/mobile-wallet`](https://github.com/openMF/mobile-wallet)  
@@ -49,7 +46,6 @@ My GSoC project focused on **Making the Mobile Wallet Deployment-Ready for G2P a
 [![Back To Top](https://img.shields.io/badge/Back%20To%20Top-Blue?style=flat)](#readme-top)
 
 </div>
----
 
 ## Mifos Mobile
 
@@ -85,7 +81,6 @@ My GSoC project focused on **Making the Mobile Wallet Deployment-Ready for G2P a
 [![Back To Top](https://img.shields.io/badge/Back%20To%20Top-Blue?style=flat)](#readme-top)
 
 </div>
----
 
 ## KMP Project Template
 
@@ -97,24 +92,24 @@ My GSoC project focused on **Making the Mobile Wallet Deployment-Ready for G2P a
 | 1 | [#85](https://github.com/openMF/kmp-project-template/pull/85) | **iOS:** Switch to CocoaPods integration for `cmp-shared`. |
 | 2 | [#78](https://github.com/openMF/kmp-project-template/pull/78) | Refactor Fastlane and CI workflows for more robust iOS distribution. |
 | 3 | [#77](https://github.com/openMF/kmp-project-template/pull/77) | Add TODO app use case to Home screen (sample). |
-| 4 | [#72](https://github.com/openMF/kmp-project-template/pull/72) | Add Adaptive Layouts for responsive UI. |
+| 4 | [#72](https://github.com/openMF/kmp-project-template/pull/72) | **Adaptive Layouts (Design System):** Added Material 3 adaptive scaffolds for phones/tablets — `AdaptiveNavigableListDetailPaneScaffold`, `AdaptiveListDetailPaneScaffold`, `AdaptiveNavigableSupportingPaneScaffold`, and `AdaptiveNavigationSuiteScaffold`. Encapsulates list–detail and supporting-pane patterns, window-size awareness, and ready-to-use examples. |
 | 5 | [#71](https://github.com/openMF/kmp-project-template/pull/71) | Update testers group name for distribution (CI). |
-| 6 | [#70](https://github.com/openMF/kmp-project-template/pull/70) | Modularize Design System as a CMP UI library; add dynamic theming. |
-| 7 | [#62](https://github.com/openMF/kmp-project-template/pull/62) | Add `core-base/network` module. |
-| 8 | [#61](https://github.com/openMF/kmp-project-template/pull/61) | Add missing App Store Connect metadata & privacy details. |
-| 9 | [#60](https://github.com/openMF/kmp-project-template/pull/60) | Create **release** lane for App Store; add metadata support. |
-| 10 | [#59](https://github.com/openMF/kmp-project-template/pull/59) | Configure iOS deployment to Firebase & TestFlight with Fastlane + GHA. |
-| 11 | [#57](https://github.com/openMF/kmp-project-template/pull/57) | Revert accidental `google-services.json` commit. |
-| 12 | [#56](https://github.com/openMF/kmp-project-template/pull/56) | Rename workflow naming & versioning (consistency). |
-| 13 | [#55](https://github.com/openMF/kmp-project-template/pull/55) | Fix Firebase App Distribution failures in template. |
-| 14 | [#52](https://github.com/openMF/kmp-project-template/pull/52) | Fastlane lane for iOS Firebase releases. |
-| 15 | [#51](https://github.com/openMF/kmp-project-template/pull/51) | Update Fastlane version. |
-| 16 | [#49](https://github.com/openMF/kmp-project-template/pull/49) | Implement theme selection across the project. |
+| 6 | [#49](https://github.com/openMF/kmp-project-template/pull/49) | **Theme Selection & Dynamic Colors (Android 12+):** Cross-platform theme picker. On Android choose **Default** or **Android**, toggle **Dynamic Colors** (12+), and switch **Light/Dark**; iOS/Web/Desktop support **Light/Dark** toggle. Introduced reusable `ThemeCard`; used `getPlatform` & `supportsDynamicTheming`. |
+| 7 | [#70](https://github.com/openMF/kmp-project-template/pull/70) | Modularize Design System as a CMP UI library; add dynamic theming. |
+| 8 | [#62](https://github.com/openMF/kmp-project-template/pull/62) | **Ktorfit Networking Module:** Turn-key `HttpClient` config (`setupDefaultHttpClient`) with sensible defaults (timeouts, logging, auth, JSON) and overrides. Added `ResultSuspendConverterFactory` & `ResultFlowConverterFactory` for `Result<Success, RemoteError>` wrapping on suspend/Flow APIs—less boilerplate, unified error handling. |
+| 9 | [#61](https://github.com/openMF/kmp-project-template/pull/61) | Add missing App Store Connect metadata & privacy details. |
+| 10 | [#60](https://github.com/openMF/kmp-project-template/pull/60) | Create **release** lane for App Store; add metadata support. |
+| 11 | [#59](https://github.com/openMF/kmp-project-template/pull/59) | **iOS CI/CD Overhaul:** Migrated Fastlane Match to **SSH** (more reliable), reverted to **automatic signing**, and updated docs. Multi-Platform Build & Publish workflow can ship to **Firebase**, **TestFlight**, or both; integrated changes across shared actions/workflows. |
+| 12 | [#57](https://github.com/openMF/kmp-project-template/pull/57) | Revert accidental `google-services.json` commit. |
+| 13 | [#56](https://github.com/openMF/kmp-project-template/pull/56) | Rename workflow naming & versioning (consistency). |
+| 14 | [#55](https://github.com/openMF/kmp-project-template/pull/55) | Fix Firebase App Distribution failures in template. |
+| 15 | [#52](https://github.com/openMF/kmp-project-template/pull/52) | Fastlane lane for iOS Firebase releases. |
+| 16 | [#51](https://github.com/openMF/kmp-project-template/pull/51) | Update Fastlane version. |
 | 17 | [#48](https://github.com/openMF/kmp-project-template/pull/48) | Configure iOS project to connect `cmp-shared`. |
 | 18 | [#47](https://github.com/openMF/kmp-project-template/pull/47) | Add `core-base/` to the sync workflow. |
 | 19 | [#46](https://github.com/openMF/kmp-project-template/pull/46) | Add `core-base/datastore` module. |
 | 20 | [#45](https://github.com/openMF/kmp-project-template/pull/45) | Add `core/datastore` module. |
-| 21 | [#43](https://github.com/openMF/kmp-project-template/pull/43) | Add `core-base/database` module. |
+| 21 | [#43](https://github.com/openMF/kmp-project-template/pull/43) | **Core-Base Database Module:** Moved shared Room pieces to `core-base/database`; `DatabaseFactory` now returns `RoomDatabase.Builder` for per-app customization. Kept app-specific entities/DAOs in `core/database`; added expect/actual structure and Koin wiring. |
 | 22 | [#42](https://github.com/openMF/kmp-project-template/pull/42) | Add `core/database` module. |
 
 <div align="right">
@@ -122,7 +117,6 @@ My GSoC project focused on **Making the Mobile Wallet Deployment-Ready for G2P a
 [![Back To Top](https://img.shields.io/badge/Back%20To%20Top-Blue?style=flat)](#readme-top)
 
 </div>
----
 
 ## Android Client
 
@@ -139,7 +133,6 @@ My GSoC project focused on **Making the Mobile Wallet Deployment-Ready for G2P a
 [![Back To Top](https://img.shields.io/badge/Back%20To%20Top-Blue?style=flat)](#readme-top)
 
 </div>
----
 
 ## Mifos Passcode CMP
 
