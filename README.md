@@ -5,141 +5,155 @@ This repository documents my work during Google Summer of Code 2025 with the [Mi
 
 My GSoC project focused on **Making the Mobile Wallet Deployment-Ready for G2P and Merchant Use Cases**, but my work extended across multiple repositories to enhance functionality, fix bugs, improve CI/CD, and contribute to the Kotlin Multiplatform ecosystem within Mifos.
 
-![Gsoc25Project](https://summerofcode.withgoogle.com/programs/2025/projects/isymcaV0)
-![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
-
 </div>
 
+## Table of Contents
 
-<details>
-<summary><kbd>Table of contents</kbd></summary>
-
-#### TOC
-- [✨ Projects and Contributions](#multi-platform-app-build-and-publish-workflow)
-  - [openMF/mobile-wallet](#workflow-usage-example)
-  - [openMF/Mifos-mobile](#workflow-usage-example)
-  - [openMF/kmp-project-template](#workflow-usage-example)
-  - [openMF/android-client](#workflow-usage-example)
-  - [openMF/mifos-passcode-cmp](#workflow-usage-example)
-- [✨ Kotlin/JS Web Application GitHub Pages Deployment Workflow](#kotlinjs-web-application-github-pages-deployment-workflow)
-  - [Workflow Configuration](#workflow-configuration)
-- [✨ Monthly Version Tagging Workflow](#monthly-version-tagging-workflow)
-  - [Workflow Configuration](#workflow-configuration-1)
-- [✨ PR Check Workflow](#pr-check-workflow)
-  - [Workflow Usage Example](#workflow-usage-example-1)
-- [✨ Promote Release to Play Store Workflow](#promote-release-to-play-store-workflow)
-  - [Configuration Steps](#configuration-steps)
+- [Mobile Wallet](#mobile-wallet)
+- [Mifos Mobile (Android end-user app)](#mifos-mobile)
+- [KMP Project Template](#kmp-project-template)
+- [Android Client (Field Officer app)](#android-client)
+- [Mifos Passcode CMP (KMP library)](#mifos-passcode-cmp)
+- [Fineract Client KMP SDK](#fineract-client-kmp-sdk)
 
 ####
 </details>
 
+## Mobile Wallet
 
-# Projects and Contributions
-1. openMF/mobile-wallet
-A Kotlin Multiplatform (KMP) reference implementation of a digital wallet built on Apache Fineract. It supports Android, iOS, desktop, and web platforms using Compose Multiplatform, Ktor/Ktorfit, and Koin to deliver a clean architecture-based wallet with payment capabilities. Developed for both client and merchant use cases, this wallet is optimized for financial inclusion scenarios and aligned with open digital finance frameworks.
+**Repo:** [`openMF/mobile-wallet`](https://github.com/openMF/mobile-wallet)  
+**About:** A Kotlin Multiplatform (KMP) reference implementation of a digital wallet built on Apache Fineract. It supports Android, iOS, desktop, and web platforms using Compose Multiplatform, Ktor/Ktorfit, and Koin to deliver a clean architecture-based wallet with payment capabilities. Developed for both client and merchant use cases, this wallet is optimized for financial inclusion scenarios and aligned with open digital finance frameworks.
 
-| No          | PR No                           | Description                                                                  | PreGsoc/Gsoc | Required |
-|-------------------|------------------------------------|------------------------------------------------------------------------------|-----------------|----------|
-| Android           | `ORIGINAL_KEYSTORE_FILE`           | Base64 encoded release keystore                                              | Base64          | Yes      |
-| Android           | `ORIGINAL_KEYSTORE_FILE_PASSWORD`  | Keystore password                                                            | String          | Yes      |
-| Android           | `ORIGINAL_KEYSTORE_ALIAS`          | Keystore alias                                                               | String          | Yes      |
-| Android           | `ORIGINAL_KEYSTORE_ALIAS_PASSWORD` | Keystore alias password                                                      | String          | Yes      |
-|                   |                                    |                                                                              |                 |          |
-| Android           | `UPLOAD_KEYSTORE_FILE`             | Base64 encoded release keystore for upload                                   | Base64          | Yes      |
-| Android           | `UPLOAD_KEYSTORE_FILE_PASSWORD`    | Upload keystore password                                                     | String          | Yes      |
-| Android           | `UPLOAD_KEYSTORE_ALIAS`            | Upload keystore alias                                                        | String          | Yes      |
-| Android           | `UPLOAD_KEYSTORE_ALIAS_PASSWORD`   | Upload keystore alias password                                               | String          | Yes      |
-|                   |                                    |                                                                              |                 |          |
-| Google Services   | `GOOGLESERVICES`                   | Google Services JSON content                                                 | Base64          | Yes      |
-| Play Console      | `PLAYSTORECREDS`                   | Play Store service account credentials                                       | Base64          | Yes      |
-| Firebase          | `FIREBASECREDS`                    | Firebase App Distribution credentials                                        | Base64          | Yes      |
-|                   |                                    |                                                                              |                 |          |
-| iOS               | `NOTARIZATION_APPLE_ID`            | Apple ID for app notarization                                                | String          | Yes      |
-| iOS               | `NOTARIZATION_PASSWORD`            | Password for notarization process                                            | String          | Yes      |
-
-3. openMF/Mifos-mobile
-The official native Android application for end-user clients built on the MifosX/Fineract self-service platform. Written in Kotlin, it allows customers to view and manage their savings, loans, and transactions securely. The app provides a pared-down user experience tailored to mobile clients with integration into core banking services.
-
-4. openMF/kmp-project-template
-A boilerplate template designed for Kotlin Multiplatform projects. It provides standard architecture, build configuration, and Gradle setup to boot‑strap new KMP-driven SDKs or client apps. It streamlines cross-platform development and enforces best practices for modular, Kotlin-based libraries and applications.
-
-5. openMF/android-client
-A field‑officer facing Android app that runs on top of the Mifos/Fineract backend. Originally built as a Kotlin multi-module application, it enables staff to manage portfolios, approve loans, and handle client data in remote locations. Recent efforts focus on migrating its network layer to the fineract-client-kmp-sdk and adopting Multiplatform code structure.
-
-6. openMF/mifos-passcode-cmp
-A Kotlin Multiplatform library providing secure passcode functionality for Mifos applications. It supports Android, iOS, and desktop apps and enforces passcode lock on resume or inactivity. Released under Apache 2.0, it improves app security and UX consistency across platforms.
-
-## Kotlin Multiplatform Project Setup Guide
-
-
-
-
-### Resources
-- [Kotlin Multiplatform Documentation](https://kotlinlang.org/docs/multiplatform.html)
-- [Compose Multiplatform Guide](https://www.jetbrains.com/lp/compose-multiplatform/)
-- [Fastlane Documentation](https://docs.fastlane.tools/)
+| No. | PR | Description |
+| --- | --- | --- |
+| 1 | [#1904](https://github.com/openMF/mobile-wallet/pull/1904) | Speed up CI by optimizing the slow `cmp_shared` build step. |
+| 2 | [#1901](https://github.com/openMF/mobile-wallet/pull/1901) | Align Fastlane `Fastfile` and configs with the KMP project structure for smoother distribution. |
+| 3 | [#1900](https://github.com/openMF/mobile-wallet/pull/1900) | Fix multiplatform targets (iOS, Desktop, JS) and update dependency versions. |
+| 4 | [#1898](https://github.com/openMF/mobile-wallet/pull/1898) | Consolidate network layers (move `core-base/network` into `core/network`). |
+| 5 | [#1897](https://github.com/openMF/mobile-wallet/pull/1897) | Replace `MaterialTheme` with `KptMaterialTheme` in feature layer (shared design system). |
+| 6 | [#1896](https://github.com/openMF/mobile-wallet/pull/1896) | Replace `MaterialTheme` with `KptMaterialTheme` in core layer. |
+| 7 | [#1895](https://github.com/openMF/mobile-wallet/pull/1895) | Sync missing root files/folders from the KMP project template. |
+| 8 | [#1894](https://github.com/openMF/mobile-wallet/pull/1894) | Complete build-logic setup; add missing dependencies to the version catalog. |
+| 9 | [#1893](https://github.com/openMF/mobile-wallet/pull/1893) | Rename modules from `mifospay-*` to `cmp-*` for consistency. |
+| 10 | [#1884](https://github.com/openMF/mobile-wallet/pull/1884) | Implement iOS file sharing and improve Android share logic. |
+| 11 | [#1878](https://github.com/openMF/mobile-wallet/pull/1878) | Fix iOS navigation & crashes; add `TransferDate` serializer; improve Beneficiary & Home screens. |
+| 12 | [#1877](https://github.com/openMF/mobile-wallet/pull/1877) | Add Postman collection to validate self-service APIs for the wallet. |
+| 13 | [#1876](https://github.com/openMF/mobile-wallet/pull/1876) | Fix crash on app open without internet after passcode entry. |
+| 14 | [#1875](https://github.com/openMF/mobile-wallet/pull/1875) | Fix `TransferDetail` deserialization by changing `transferDate` type to `String`. |
+| 15 | [#1874](https://github.com/openMF/mobile-wallet/pull/1874) | Improve Make Transfer account selection (BottomSheetScaffold refactor). |
+| 16 | [#1872](https://github.com/openMF/mobile-wallet/pull/1872) | **Auth:** Implement full Sign-In & Sign-Up flows with validation. |
+| 17 | [#1867](https://github.com/openMF/mobile-wallet/pull/1867) | Update testers group name for app distribution. |
 
 <div align="right">
+  
+[![Back To Top](https://img.shields.io/badge/Back%20To%20Top-Blue?style=flat)](#readme-top)
 
+</div>
+---
+
+## Mifos Mobile
+
+**Repo:** [`openMF/Mifos-mobile`](https://github.com/openMF/Mifos-mobile)  
+**About:** The official native Android application for end-user clients built on the MifosX/Fineract self-service platform. Written in Kotlin, it allows customers to view and manage their savings, loans, and transactions securely. The app provides a pared-down user experience tailored to mobile clients with integration into core banking services.
+
+| No. | PR | Description |
+| --- | --- | --- |
+| 1 | [#2844](https://github.com/openMF/Mifos-mobile/pull/2844) | Update testers group name for app distribution (CI). |
+| 2 | [#2823](https://github.com/openMF/Mifos-mobile/pull/2823) | Configure iOS project to connect `cmp-shared` (KMP enablement). |
+| 3 | [#2800](https://github.com/openMF/Mifos-mobile/pull/2800) | Fix navigation flow after successful transaction. |
+| 4 | [#2795](https://github.com/openMF/Mifos-mobile/pull/2795) | Improve dynamic account selection; add decimal support in transactions. |
+| 5 | [#2782](https://github.com/openMF/Mifos-mobile/pull/2782) | Remove `feature/account` module from CMP (cleanup). |
+| 6 | [#2781](https://github.com/openMF/Mifos-mobile/pull/2781) | Add missing imports; remove unnecessary properties in composables. |
+| 7 | [#2779](https://github.com/openMF/Mifos-mobile/pull/2779) | **Accounts:** Migrate `feature:accounts` to CMP. |
+| 8 | [#2778](https://github.com/openMF/Mifos-mobile/pull/2778) | **Share Account:** Complete CMP migration. |
+| 9 | [#2776](https://github.com/openMF/Mifos-mobile/pull/2776) | **Share Account:** Start migration to CMP. |
+| 10 | [#2775](https://github.com/openMF/Mifos-mobile/pull/2775) | **Loan Account:** Migrate module to CMP. |
+| 11 | [#2774](https://github.com/openMF/Mifos-mobile/pull/2774) | **Savings Account:** Migrate module to CMP. |
+| 12 | [#2773](https://github.com/openMF/Mifos-mobile/pull/2773) | Set up initial directory structure for `feature:account`. |
+| 13 | [#2765](https://github.com/openMF/Mifos-mobile/pull/2765) | Configure & fix Detekt for KMP; enable Firebase upload for testing. |
+| 14 | [#2762](https://github.com/openMF/Mifos-mobile/pull/2762) | Update README and add Zoom link. |
+| 15 | [#2761](https://github.com/openMF/Mifos-mobile/pull/2761) | **About:** Migrate module to CMP. |
+| 16 | [#2759](https://github.com/openMF/Mifos-mobile/pull/2759) | Fix incorrect `DataState` import in datastore. |
+| 17 | [#2752](https://github.com/openMF/Mifos-mobile/pull/2752) | **Database:** Migrate to KMP. |
+| 18 | [#2748](https://github.com/openMF/Mifos-mobile/pull/2748) | Prevent crash when opening Mifos license; tweak icon colors. |
+| 19 | [#2732](https://github.com/openMF/Mifos-mobile/pull/2732) | **Model:** Migrate to KMP. |
+| 20 | [#2724](https://github.com/openMF/Mifos-mobile/pull/2724) | Fix visibility on Savings Account Withdraw screen. |
+| 21 | [#2721](https://github.com/openMF/Mifos-mobile/pull/2721) | Docs cleanup: remove outdated Notice section content. |
+
+<div align="right">
+  
+[![Back To Top](https://img.shields.io/badge/Back%20To%20Top-Blue?style=flat)](#readme-top)
+
+</div>
+---
+
+## KMP Project Template
+
+**Repo:** [`openMF/kmp-project-template`](https://github.com/openMF/kmp-project-template)  
+**About:** A boilerplate template designed for Kotlin Multiplatform projects. It provides standard architecture, build configuration, and Gradle setup to boot‑strap new KMP-driven SDKs or client apps. It streamlines cross-platform development and enforces best practices for modular, Kotlin-based libraries and applications.
+
+| No. | PR | Description |
+| --- | --- | --- |
+| 1 | [#85](https://github.com/openMF/kmp-project-template/pull/85) | **iOS:** Switch to CocoaPods integration for `cmp-shared`. |
+| 2 | [#78](https://github.com/openMF/kmp-project-template/pull/78) | Refactor Fastlane and CI workflows for more robust iOS distribution. |
+| 3 | [#77](https://github.com/openMF/kmp-project-template/pull/77) | Add TODO app use case to Home screen (sample). |
+| 4 | [#72](https://github.com/openMF/kmp-project-template/pull/72) | Add Adaptive Layouts for responsive UI. |
+| 5 | [#71](https://github.com/openMF/kmp-project-template/pull/71) | Update testers group name for distribution (CI). |
+| 6 | [#70](https://github.com/openMF/kmp-project-template/pull/70) | Modularize Design System as a CMP UI library; add dynamic theming. |
+| 7 | [#62](https://github.com/openMF/kmp-project-template/pull/62) | Add `core-base/network` module. |
+| 8 | [#61](https://github.com/openMF/kmp-project-template/pull/61) | Add missing App Store Connect metadata & privacy details. |
+| 9 | [#60](https://github.com/openMF/kmp-project-template/pull/60) | Create **release** lane for App Store; add metadata support. |
+| 10 | [#59](https://github.com/openMF/kmp-project-template/pull/59) | Configure iOS deployment to Firebase & TestFlight with Fastlane + GHA. |
+| 11 | [#57](https://github.com/openMF/kmp-project-template/pull/57) | Revert accidental `google-services.json` commit. |
+| 12 | [#56](https://github.com/openMF/kmp-project-template/pull/56) | Rename workflow naming & versioning (consistency). |
+| 13 | [#55](https://github.com/openMF/kmp-project-template/pull/55) | Fix Firebase App Distribution failures in template. |
+| 14 | [#52](https://github.com/openMF/kmp-project-template/pull/52) | Fastlane lane for iOS Firebase releases. |
+| 15 | [#51](https://github.com/openMF/kmp-project-template/pull/51) | Update Fastlane version. |
+| 16 | [#49](https://github.com/openMF/kmp-project-template/pull/49) | Implement theme selection across the project. |
+| 17 | [#48](https://github.com/openMF/kmp-project-template/pull/48) | Configure iOS project to connect `cmp-shared`. |
+| 18 | [#47](https://github.com/openMF/kmp-project-template/pull/47) | Add `core-base/` to the sync workflow. |
+| 19 | [#46](https://github.com/openMF/kmp-project-template/pull/46) | Add `core-base/datastore` module. |
+| 20 | [#45](https://github.com/openMF/kmp-project-template/pull/45) | Add `core/datastore` module. |
+| 21 | [#43](https://github.com/openMF/kmp-project-template/pull/43) | Add `core-base/database` module. |
+| 22 | [#42](https://github.com/openMF/kmp-project-template/pull/42) | Add `core/database` module. |
+
+<div align="right">
+  
+[![Back To Top](https://img.shields.io/badge/Back%20To%20Top-Blue?style=flat)](#readme-top)
+
+</div>
+---
+
+## Android Client
+
+**Repo:** [`openMF/android-client`](https://github.com/openMF/android-client)  
+**About:** A field‑officer facing Android app that runs on top of the Mifos/Fineract backend. Originally built as a Kotlin multi-module application, it enables staff to manage portfolios, approve loans, and handle client data in remote locations. Recent efforts focus on migrating its network layer to the fineract-client-kmp-sdk and adopting Multiplatform code structure.
+
+| No. | PR | Description |
+| --- | --- | --- |
+| 1 | [#2378](https://github.com/openMF/android-client/pull/2378) | Update testers group name used for app distribution (CI). |
+| 2 | [#2376](https://github.com/openMF/android-client/pull/2376) | Same CI update across workflows to keep distribution groups consistent. |
+
+<div align="right">
+  
+[![Back To Top](https://img.shields.io/badge/Back%20To%20Top-Blue?style=flat)](#readme-top)
+
+</div>
+---
+
+## Mifos Passcode CMP
+
+**Repo:** [`openMF/mifos-passcode-cmp`](https://github.com/openMF/mifos-passcode-cmp)  
+**About:** A Kotlin Multiplatform library providing secure passcode functionality for Mifos applications. It supports Android, iOS, and desktop apps and enforces passcode lock on resume or inactivity. Released under Apache 2.0, it improves app security and UX consistency across platforms.
+
+| No. | PR | Description |
+| --- | --- | --- |
+| 1 | [#42](https://github.com/openMF/mifos-passcode-cmp/pull/42) | Implement biometric authentication support for iOS. |
+| 2 | [#41](https://github.com/openMF/mifos-passcode-cmp/pull/41) | Add iOS build support for the CMP module. |
+
+<div align="right">
+  
 [![Back To Top](https://img.shields.io/badge/Back%20To%20Top-Blue?style=flat)](#readme-top)
 
 </div>
 
----
-
-# Multi-Platform App Build and Publish Workflow
-
-> \[!TIP]
->  ####  _[multi_platform_build_and_publish.yaml](.github/workflows/multi-platform-build-and-publish.yaml)_ 👀️
-
-
-<div align="right">
-
-[![Back To Top](https://img.shields.io/badge/Back%20To%20Top-Blue?style=flat)](#readme-top)
-
-</div>
-
----
-
-# Monthly Version Tagging Workflow
-
-> \[!TIP]
->
-> #### [_monthly-version-tag.yaml_](.github/workflows/monthly-version-tag.yaml)
-
-```mermaid
-flowchart TD
-    A([Workflow Starts]) --> B[Checkout Repository]
-    B --> C[Get Current Timestamp]
-    
-    C --> D[Create Version Tag]
-    D --> E[Tag Format: YYYY.MM.0]
-    
-    style A fill:#2196F3,color:white
-    style B fill:#4CAF50,color:white
-    style C fill:#FF9800,color:white
-    style D fill:#9C27B0,color:white
-    style E fill:#03A9F4,color:white
-```
-
-
-<div align="right">
-
-[![Back To Top](https://img.shields.io/badge/Back%20To%20Top-Blue?style=flat)](#readme-top)
-
-</div>
-
----
-
-# PR Check Workflow
-
-> \[!TIP]
-> #### [_pr_check.yml_](.github/workflows/pr-check.yaml)
-
-<div align="right">
-
-[![Back To Top](https://img.shields.io/badge/Back%20To%20Top-Blue?style=flat)](#readme-top)
-
-</div>
-
----
