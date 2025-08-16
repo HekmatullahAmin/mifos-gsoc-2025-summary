@@ -50,7 +50,7 @@ My GSoC project focused on **Making the Mobile Wallet Deployment-Ready for G2P a
 ## Mifos Mobile
 
 **Repo:** [`openMF/Mifos-mobile`](https://github.com/openMF/Mifos-mobile)  
-**About:** The official native Android application for end-user clients built on the MifosX/Fineract self-service platform. Written in Kotlin, it allows customers to view and manage their savings, loans, and transactions securely. The app provides a pared-down user experience tailored to mobile clients with integration into core banking services.
+**About:** A **Kotlin Multiplatform** client for end users, built on the MifosX Self-Service platform. It lets customers securely view and transact on their own accounts and loans. Compared to staff apps, data is a curated subset appropriate for self-service. Shared KMP modules power business logic across Android, iOS, Desktop, and Web, with Kotlin/Compose UIs providing a streamlined, consistent experience.
 
 | No. | PR | Description |
 | --- | --- | --- |
@@ -86,7 +86,15 @@ My GSoC project focused on **Making the Mobile Wallet Deployment-Ready for G2P a
 ## KMP Project Template
 
 **Repo:** [`openMF/kmp-project-template`](https://github.com/openMF/kmp-project-template)  
-**About:** A boilerplate template designed for Kotlin Multiplatform projects. It provides standard architecture, build configuration, and Gradle setup to boot‑strap new KMP-driven SDKs or client apps. It streamlines cross-platform development and enforces best practices for modular, Kotlin-based libraries and applications.
+**About:** The **ultimate Kotlin Multiplatform project generator** with a production-ready setup.
+
+- **Cross-Platform Support:** Android, iOS, Desktop, and Web from a single codebase  
+- **Multi-Module Architecture:** Clean, organized, and scalable structure  
+- **Advanced Source Set Hierarchy:** Sophisticated sharing with logical platform groupings  
+- **Pre-configured CI/CD:** GitHub Actions for build, test, and deployment  
+- **Code Quality Tools:** Static analysis and formatting pre-wired  
+- **Sync Capabilities:** Utilities to stay in sync with upstream template changes  
+- **Secrets Management:** Secure handling of keystores and other sensitive artifacts
 
 | No. | PR | Description |
 | --- | --- | --- |
@@ -122,7 +130,9 @@ My GSoC project focused on **Making the Mobile Wallet Deployment-Ready for G2P a
 ## Android Client
 
 **Repo:** [`openMF/android-client`](https://github.com/openMF/android-client)  
-**About:** A field‑officer facing Android app that runs on top of the Mifos/Fineract backend. Originally built as a Kotlin multi-module application, it enables staff to manage portfolios, approve loans, and handle client data in remote locations. Recent efforts focus on migrating its network layer to the fineract-client-kmp-sdk and adopting Multiplatform code structure.
+**About:** A **Kotlin Multiplatform** application built on the MifosX core banking platform, designed for field officers to efficiently process transactions, manage client data, track center and group records, and handle accounts (loans, savings, recurring deposits). The goal is to streamline field operations with a shared cross-platform codebase (domain, data, networking), while delivering a polished Android experience and paving the way for additional platforms.
+
+A standout capability is robust **offline support**, enabling officers to work in remote areas and sync when connectivity returns—so underserved clients can still access essential financial services.
 
 | No. | PR | Description |
 | --- | --- | --- |
@@ -158,7 +168,8 @@ My GSoC project focused on **Making the Mobile Wallet Deployment-Ready for G2P a
 [`openMF/mifos-x-actionhub-build-ios-app`](https://github.com/openMF/mifos-x-actionhub-build-ios-app) ·
 [`openMF/mifos-x-actionhub-publish-ios-on-firebase`](https://github.com/openMF/mifos-x-actionhub-publish-ios-on-firebase) ·
 [`openMF/mifos-x-actionhub-publish-ios-on-appstore-testflight`](https://github.com/openMF/mifos-x-actionhub-publish-ios-on-appstore-testflight) ·
-[`openMF/mifos-x-actionhub-publish-ios-on-appstore`](https://github.com/openMF/mifos-x-actionhub-publish-ios-on-appstore)
+[`openMF/mifos-x-actionhub-publish-ios-on-appstore`](https://github.com/openMF/mifos-x-actionhub-publish-ios-on-appstore)  
+**About:** A suite of **reusable GitHub Actions** and workflows that standardize iOS/KMP delivery across Mifos projects: building signed/unsigned iOS apps, distributing to **Firebase App Distribution**, and publishing to **TestFlight**/**App Store** — with improved reliability via **SSH-based Fastlane Match**, clear inputs, and comprehensive documentation. These actions are used by the KMP template and app repos to keep release pipelines consistent and repeatable.
 
 | No. | PR | Repo | Description |
 | --- | --- | --- | --- |
