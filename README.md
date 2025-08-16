@@ -1,9 +1,28 @@
-<div align="center"><a name="readme-top"></a>
+<!-- Top anchor for “Back to Top” links -->
+<a name="readme-top"></a>
 
-# Google Summer of Code 2025 – Contributions to Mifos Initiative
-This repository documents my work during Google Summer of Code 2025 with the [Mifos Initiative](https://github.com/openMF), as well as my contributions before the official coding period.
+<div align="center">
 
-My GSoC project focused on **Making the Mobile Wallet Deployment-Ready for G2P and Merchant Use Cases**, but my work extended across multiple repositories to enhance functionality, fix bugs, improve CI/CD, and contribute to the Kotlin Multiplatform ecosystem within Mifos.
+  <!-- Hero banner (replace with your actual GIF or image path) -->
+  <img src="https://github.com/user-attachments/assets/6b854ebf-1611-4ee9-bad9-493d700d73e8" alt="Google Summer of Code x Mifos Initiative" width="900" height="400" />
+
+  <h1>Google Summer of Code 2025 – Contributions to Mifos Initiative</h1>
+
+  <p>
+    This repository documents my GSoC 2025 work with the <a href="https://github.com/openMF">Mifos Initiative</a>, plus contributions before the official coding period.
+  </p>
+
+  <!-- Badges -->
+  <p>
+    <img alt="GSoC 2025" src="https://img.shields.io/badge/GSoC-2025-ffa500?logo=google&logoColor=white">
+    <img alt="Kotlin Multiplatform" src="https://img.shields.io/badge/Kotlin-Multiplatform-7F52FF?logo=kotlin&logoColor=white">
+    <img alt="Compose Multiplatform" src="https://img.shields.io/badge/Compose-Multiplatform-2E7D32?logo=jetpackcompose&logoColor=white">
+    <img alt="CI/CD" src="https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-2088FF?logo=githubactions&logoColor=white">
+  </p>
+
+  <p>
+    My GSoC project focused on <b>Making the Mobile Wallet Deployment-Ready for G2P and Merchant Use Cases</b>, but my work extended across multiple repositories to enhance functionality, fix bugs, improve CI/CD, and contribute to the Kotlin Multiplatform ecosystem within Mifos.
+  </p>
 
 </div>
 
