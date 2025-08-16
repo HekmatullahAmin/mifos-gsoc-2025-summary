@@ -56,25 +56,26 @@ My GSoC project focused on **Making the Mobile Wallet Deployment-Ready for G2P a
 | --- | --- | --- |
 | 1 | [#2844](https://github.com/openMF/Mifos-mobile/pull/2844) | Update testers group name for app distribution (CI). |
 | 2 | [#2823](https://github.com/openMF/Mifos-mobile/pull/2823) | Configure iOS project to connect `cmp-shared` (KMP enablement). |
-| 3 | [#2800](https://github.com/openMF/Mifos-mobile/pull/2800) | Fix navigation flow after successful transaction. |
-| 4 | [#2795](https://github.com/openMF/Mifos-mobile/pull/2795) | Improve dynamic account selection; add decimal support in transactions. |
-| 5 | [#2782](https://github.com/openMF/Mifos-mobile/pull/2782) | Remove `feature/account` module from CMP (cleanup). |
-| 6 | [#2781](https://github.com/openMF/Mifos-mobile/pull/2781) | Add missing imports; remove unnecessary properties in composables. |
-| 7 | [#2779](https://github.com/openMF/Mifos-mobile/pull/2779) | **Accounts:** Migrate `feature:accounts` to CMP. |
-| 8 | [#2778](https://github.com/openMF/Mifos-mobile/pull/2778) | **Share Account:** Complete CMP migration. |
-| 9 | [#2776](https://github.com/openMF/Mifos-mobile/pull/2776) | **Share Account:** Start migration to CMP. |
-| 10 | [#2775](https://github.com/openMF/Mifos-mobile/pull/2775) | **Loan Account:** Migrate module to CMP. |
-| 11 | [#2774](https://github.com/openMF/Mifos-mobile/pull/2774) | **Savings Account:** Migrate module to CMP. |
-| 12 | [#2773](https://github.com/openMF/Mifos-mobile/pull/2773) | Set up initial directory structure for `feature:account`. |
-| 13 | [#2765](https://github.com/openMF/Mifos-mobile/pull/2765) | Configure & fix Detekt for KMP; enable Firebase upload for testing. |
-| 14 | [#2762](https://github.com/openMF/Mifos-mobile/pull/2762) | Update README and add Zoom link. |
-| 15 | [#2761](https://github.com/openMF/Mifos-mobile/pull/2761) | **About:** Migrate module to CMP. |
-| 16 | [#2759](https://github.com/openMF/Mifos-mobile/pull/2759) | Fix incorrect `DataState` import in datastore. |
-| 17 | [#2752](https://github.com/openMF/Mifos-mobile/pull/2752) | **Database:** Migrate to KMP. |
-| 18 | [#2748](https://github.com/openMF/Mifos-mobile/pull/2748) | Prevent crash when opening Mifos license; tweak icon colors. |
-| 19 | [#2732](https://github.com/openMF/Mifos-mobile/pull/2732) | **Model:** Migrate to KMP. |
-| 20 | [#2724](https://github.com/openMF/Mifos-mobile/pull/2724) | Fix visibility on Savings Account Withdraw screen. |
-| 21 | [#2721](https://github.com/openMF/Mifos-mobile/pull/2721) | Docs cleanup: remove outdated Notice section content. |
+| 3 | [#2800](https://github.com/openMF/Mifos-mobile/pull/2800) | **Fix post-transfer navigation:** Users now return to the screen they started from—Home → **Home**, Savings Account → **Savings**, Loan Account → **Loan**—after a successful transfer. Improves consistency and UX. |
+| 4 | [#2799](https://github.com/openMF/Mifos-mobile/pull/2799) | **Epic: Modularize Account feature.** Created module scaffolding and Gradle configs for **accounts (base)**, **savings-account**, **loan-account**, and **share-account**; wired dependencies (accounts depends on the others). Added KDoc, refactored/moved functions, renamed props for consistency, made the filter dialog dynamic (checkboxes from status), introduced card UI for account items, and organized module-specific strings. Tracks sub-work: #2774, #2775, #2776, #2773, #2778, #2782, #2781. |
+| 5 | [#2795](https://github.com/openMF/Mifos-mobile/pull/2795) | Improve dynamic account selection; add decimal support in transactions. |
+| 6 | [#2782](https://github.com/openMF/Mifos-mobile/pull/2782) | Remove `feature/account` module from CMP (cleanup). |
+| 7 | [#2781](https://github.com/openMF/Mifos-mobile/pull/2781) | Add missing imports; remove unnecessary properties in composables. |
+| 8 | [#2779](https://github.com/openMF/Mifos-mobile/pull/2779) | **Accounts:** Migrate `feature:accounts` to CMP. |
+| 9 | [#2778](https://github.com/openMF/Mifos-mobile/pull/2778) | **Share Account:** Complete CMP migration. |
+| 10 | [#2776](https://github.com/openMF/Mifos-mobile/pull/2776) | **Share Account:** Start module migration to CMP. |
+| 11 | [#2775](https://github.com/openMF/Mifos-mobile/pull/2775) | **Loan Account:** Migrate module to CMP. |
+| 12 | [#2774](https://github.com/openMF/Mifos-mobile/pull/2774) | **Savings Account:** Migrate module to CMP. |
+| 13 | [#2773](https://github.com/openMF/Mifos-mobile/pull/2773) | Set up initial directory structure for `feature:account`. |
+| 14 | [#2765](https://github.com/openMF/Mifos-mobile/pull/2765) | Configure & fix Detekt for KMP; enable Firebase upload for testing. |
+| 15 | [#2762](https://github.com/openMF/Mifos-mobile/pull/2762) | Update README and add Zoom link. |
+| 16 | [#2761](https://github.com/openMF/Mifos-mobile/pull/2761) | **About:** Migrate module to CMP. |
+| 17 | [#2759](https://github.com/openMF/Mifos-mobile/pull/2759) | Fix incorrect `DataState` import in datastore. |
+| 18 | [#2752](https://github.com/openMF/Mifos-mobile/pull/2752) | **Database:** Migrate module to KMP. |
+| 19 | [#2748](https://github.com/openMF/Mifos-mobile/pull/2748) | Prevent crash when opening Mifos license; tweak icon colors. |
+| 20 | [#2732](https://github.com/openMF/Mifos-mobile/pull/2732) | **Model:** Migrate module to KMP. |
+| 21 | [#2724](https://github.com/openMF/Mifos-mobile/pull/2724) | Fix visibility on Savings Account Withdraw screen. |
+| 22 | [#2721](https://github.com/openMF/Mifos-mobile/pull/2721) | Docs cleanup: remove outdated Notice section content. |
 
 <div align="right">
   
