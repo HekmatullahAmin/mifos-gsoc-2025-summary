@@ -10,11 +10,11 @@ My GSoC project focused on **Making the Mobile Wallet Deployment-Ready for G2P a
 ## Table of Contents
 
 - [Mobile Wallet](#mobile-wallet)
-- [Mifos Mobile (Android end-user app)](#mifos-mobile)
+- [Mifos Mobile](#mifos-mobile)
 - [KMP Project Template](#kmp-project-template)
 - [Android Client (Field Officer app)](#android-client)
 - [Mifos Passcode CMP (KMP library)](#mifos-passcode-cmp)
-- [Fineract Client KMP SDK](#fineract-client-kmp-sdk)
+- [CI/CD – GitHub Actions & Reusable Workflows](#cicd--github-actions--reusable-workflows)
 
 ## Mobile Wallet
 
@@ -144,6 +144,43 @@ My GSoC project focused on **Making the Mobile Wallet Deployment-Ready for G2P a
 | --- | --- | --- |
 | 1 | [#42](https://github.com/openMF/mifos-passcode-cmp/pull/42) | Implement biometric authentication support for iOS. |
 | 2 | [#41](https://github.com/openMF/mifos-passcode-cmp/pull/41) | Add iOS build support for the CMP module. |
+
+<div align="right">
+  
+[![Back To Top](https://img.shields.io/badge/Back%20To%20Top-Blue?style=flat)](#readme-top)
+
+</div>
+
+## CI/CD – GitHub Actions & Reusable Workflows
+
+**Repos:**  
+[`openMF/mifos-x-actionhub`](https://github.com/openMF/mifos-x-actionhub) ·
+[`openMF/mifos-x-actionhub-build-ios-app`](https://github.com/openMF/mifos-x-actionhub-build-ios-app) ·
+[`openMF/mifos-x-actionhub-publish-ios-on-firebase`](https://github.com/openMF/mifos-x-actionhub-publish-ios-on-firebase) ·
+[`openMF/mifos-x-actionhub-publish-ios-on-appstore-testflight`](https://github.com/openMF/mifos-x-actionhub-publish-ios-on-appstore-testflight) ·
+[`openMF/mifos-x-actionhub-publish-ios-on-appstore`](https://github.com/openMF/mifos-x-actionhub-publish-ios-on-appstore)
+
+| No. | PR | Repo | Description |
+| --- | --- | --- | --- |
+| 1 | [#37](https://github.com/openMF/mifos-x-actionhub/pull/37) | `mifos-x-actionhub` | CI: create Compose resources directory path before build (prevents missing-path failures). |
+| 2 | [#36](https://github.com/openMF/mifos-x-actionhub/pull/36) | `mifos-x-actionhub` | Add `ci_gradle_properties_path` support + README updates for flexible Gradle props. |
+| 3 | [#35](https://github.com/openMF/mifos-x-actionhub/pull/35) | `mifos-x-actionhub` | CocoaPods-based iOS integration: add `use_cocoapods` and `shared_module` inputs. |
+| 4 | [#8](https://github.com/openMF/mifos-x-actionhub-build-ios-app/pull/8) | `build-ios-app` | Docs: add Fastlane configuration and usage guidance. |
+| 5 | [#33](https://github.com/openMF/mifos-x-actionhub/pull/33) | `mifos-x-actionhub` | Update iOS workflows to latest Fastlane actions; sync documentation. |
+| 6 | [#5](https://github.com/openMF/mifos-x-actionhub-publish-ios-on-firebase/pull/5) | `publish-ios-on-firebase` | Add App Store Connect inputs to Firebase distribution action; README updates. |
+| 7 | [#7](https://github.com/openMF/mifos-x-actionhub-build-ios-app/pull/7) | `build-ios-app` | Support both **signed Release** and **Debug** iOS builds in the action. |
+| 8 | [#32](https://github.com/openMF/mifos-x-actionhub/pull/32) | `mifos-x-actionhub` | Add Fastlane lane for **App Store** deploy; update repo README. |
+| 9 | [#1](https://github.com/openMF/mifos-x-actionhub-publish-ios-on-appstore/pull/1) | `publish-ios-on-appstore` | New action: publish iOS app to App Store via Fastlane + App Store Connect API. |
+| 10 | [#31](https://github.com/openMF/mifos-x-actionhub/pull/31) | `mifos-x-actionhub` | Refactor CI to **SSH-based Match** and split **Firebase** / **TestFlight** deploy logic. |
+| 11 | [#6](https://github.com/openMF/mifos-x-actionhub-build-ios-app/pull/6) | `build-ios-app` | Switch Match from HTTPS token to **SSH** for signing repo access in CI. |
+| 12 | [#4](https://github.com/openMF/mifos-x-actionhub-publish-ios-on-firebase/pull/4) | `publish-ios-on-firebase` | Add **SSH** support and configuration in Firebase iOS publish action. |
+| 13 | [#4](https://github.com/openMF/mifos-x-actionhub-publish-ios-on-appstore-testflight/pull/4) | `publish-ios-on-testflight` | Add **SSH** + extended config support for TestFlight deploy action. |
+| 14 | [#28](https://github.com/openMF/mifos-x-actionhub/pull/28) | `mifos-x-actionhub` | Bump iOS build action to `v1.0.1`; add extra iOS inputs. |
+| 15 | [#5](https://github.com/openMF/mifos-x-actionhub-build-ios-app/pull/5) | `build-ios-app` | README improvements/clarifications. |
+| 16 | [#3](https://github.com/openMF/mifos-x-actionhub-build-ios-app/pull/3) | `build-ios-app` | Pass **Match** and **build** parameters via inputs (more reusable). |
+| 17 | [#27](https://github.com/openMF/mifos-x-actionhub/pull/27) | `mifos-x-actionhub` | Add `MATCH_GIT_BASIC_AUTHORIZATION` env var for Git authentication. |
+| 18 | [#3](https://github.com/openMF/mifos-x-actionhub-publish-ios-on-appstore-testflight/pull/3) | `publish-ios-on-testflight` | README updates for TestFlight action. |
+| 19 | [#1](https://github.com/openMF/mifos-x-actionhub-publish-ios-on-appstore-testflight/pull/1) | `publish-ios-on-testflight` | CI: build and upload iOS app to **TestFlight** workflow. |
 
 <div align="right">
   
