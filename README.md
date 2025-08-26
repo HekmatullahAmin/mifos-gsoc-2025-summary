@@ -40,25 +40,30 @@
 **Repo:** [`openMF/mobile-wallet`](https://github.com/openMF/mobile-wallet)  
 **About:** A Kotlin Multiplatform (KMP) reference implementation of a digital wallet built on Apache Fineract. It supports Android, iOS, desktop, and web platforms using Compose Multiplatform, Ktor/Ktorfit, and Koin to deliver a clean architecture-based wallet with payment capabilities. Developed for both client and merchant use cases, this wallet is optimized for financial inclusion scenarios and aligned with open digital finance frameworks.
 
+> 🔗 **All my merged PRs (auto-updating):**  
+> https://github.com/openMF/mobile-wallet/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin
+
 | No. | PR | Description |
 | --- | --- | --- |
-| 1 | [#1904](https://github.com/openMF/mobile-wallet/pull/1904) | Speed up CI by optimizing the slow `cmp_shared` build step. |
-| 2 | [#1901](https://github.com/openMF/mobile-wallet/pull/1901) | Align Fastlane `Fastfile` and configs with the KMP project structure for smoother distribution. |
-| 3 | [#1900](https://github.com/openMF/mobile-wallet/pull/1900) | Fix multiplatform targets (iOS, Desktop, JS) and update dependency versions. |
-| 4 | [#1898](https://github.com/openMF/mobile-wallet/pull/1898) | Consolidate network layers (move `core-base/network` into `core/network`). |
-| 5 | [#1897](https://github.com/openMF/mobile-wallet/pull/1897) | Replace `MaterialTheme` with `KptMaterialTheme` in feature layer (shared design system). |
-| 6 | [#1896](https://github.com/openMF/mobile-wallet/pull/1896) | Replace `MaterialTheme` with `KptMaterialTheme` in core layer. |
-| 7 | [#1895](https://github.com/openMF/mobile-wallet/pull/1895) | Sync missing root files/folders from the KMP project template. |
-| 8 | [#1894](https://github.com/openMF/mobile-wallet/pull/1894) | Complete build-logic setup; add missing dependencies to the version catalog. |
-| 9 | [#1893](https://github.com/openMF/mobile-wallet/pull/1893) | Rename modules from `mifospay-*` to `cmp-*` for consistency. |
-| 10 | [#1884](https://github.com/openMF/mobile-wallet/pull/1884) | Implement iOS file sharing and improve Android share logic. |
-| 11 | [#1878](https://github.com/openMF/mobile-wallet/pull/1878) | Fix iOS navigation & crashes; add `TransferDate` serializer; improve Beneficiary & Home screens. |
-| 12 | [#1877](https://github.com/openMF/mobile-wallet/pull/1877) | Add Postman collection to validate self-service APIs for the wallet. |
-| 13 | [#1876](https://github.com/openMF/mobile-wallet/pull/1876) | Fix crash on app open without internet after passcode entry. |
-| 14 | [#1875](https://github.com/openMF/mobile-wallet/pull/1875) | Fix `TransferDetail` deserialization by changing `transferDate` type to `String`. |
-| 15 | [#1874](https://github.com/openMF/mobile-wallet/pull/1874) | Improve Make Transfer account selection (BottomSheetScaffold refactor). |
-| 16 | [#1872](https://github.com/openMF/mobile-wallet/pull/1872) | **Auth:** Implement full Sign-In & Sign-Up flows with validation. |
-| 17 | [#1867](https://github.com/openMF/mobile-wallet/pull/1867) | Update testers group name for app distribution. |
+| 1 | [#1911](https://github.com/openMF/mobile-wallet/pull/1911) | Added a **“macOS Build & Distribute (TestFlight / App Store)”** GitHub Actions workflow; created Fastlane lanes (`desktop_testflight`, `desktop_release`); updated Compose Desktop config for **App Store** mode (entitlements, provisioning, un-quarantine step), bumped JVM/JDK to **21**, adjusted build logic, and added iOS/macOS screenshot paths & assets. |
+| 2 | [#1905](https://github.com/openMF/mobile-wallet/pull/1905) | Added complete Fastlane **metadata** (name, subtitle, description, URLs, categories, review info), **age rating** and **privacy details** JSON, and **iPhone/iPad screenshots**; updated CI workflow to read `fastlane/metadata/ios`. |
+| 3 | [#1904](https://github.com/openMF/mobile-wallet/pull/1904) | Speed up CI by optimizing the slow `cmp_shared` build step. |
+| 4 | [#1901](https://github.com/openMF/mobile-wallet/pull/1901) | Align Fastlane `Fastfile` and configs with the KMP project structure for smoother distribution. |
+| 5 | [#1900](https://github.com/openMF/mobile-wallet/pull/1900) | Fix multiplatform targets (iOS, Desktop, JS) and update dependency versions. |
+| 6 | [#1898](https://github.com/openMF/mobile-wallet/pull/1898) | Consolidate network layers (move `core-base/network` into `core/network`). |
+| 7 | [#1897](https://github.com/openMF/mobile-wallet/pull/1897) | Replace `MaterialTheme` with `KptMaterialTheme` in feature layer (shared design system). |
+| 8 | [#1896](https://github.com/openMF/mobile-wallet/pull/1896) | Replace `MaterialTheme` with `KptMaterialTheme` in core layer. |
+| 9 | [#1895](https://github.com/openMF/mobile-wallet/pull/1895) | Sync missing root files/folders from the KMP project template. |
+| 10 | [#1894](https://github.com/openMF/mobile-wallet/pull/1894) | Complete build-logic setup; add missing dependencies to the version catalog. |
+| 11 | [#1893](https://github.com/openMF/mobile-wallet/pull/1893) | Rename modules from `mifospay-*` to `cmp-*` for consistency. |
+| 12 | [#1884](https://github.com/openMF/mobile-wallet/pull/1884) | Implement iOS file sharing and improve Android share logic. |
+| 13 | [#1878](https://github.com/openMF/mobile-wallet/pull/1878) | Fix iOS navigation & crashes; add `TransferDate` serializer; improve Beneficiary & Home screens. |
+| 14 | [#1877](https://github.com/openMF/mobile-wallet/pull/1877) | Add Postman collection to validate self-service APIs for the wallet. |
+| 15 | [#1876](https://github.com/openMF/mobile-wallet/pull/1876) | Fix crash on app open without internet after passcode entry. |
+| 16 | [#1875](https://github.com/openMF/mobile-wallet/pull/1875) | Fix `TransferDetail` deserialization by changing `transferDate` type to `String`. |
+| 17 | [#1874](https://github.com/openMF/mobile-wallet/pull/1874) | Improve Make Transfer account selection (BottomSheetScaffold refactor). |
+| 18 | [#1872](https://github.com/openMF/mobile-wallet/pull/1872) | **Auth:** Implement full Sign-In & Sign-Up flows with validation. |
+| 19 | [#1867](https://github.com/openMF/mobile-wallet/pull/1867) | Update testers group name for app distribution. |
 
 <div align="right">
   
@@ -70,6 +75,9 @@
 
 **Repo:** [`openMF/Mifos-mobile`](https://github.com/openMF/Mifos-mobile)  
 **About:** A **Kotlin Multiplatform** client for end users, built on the MifosX Self-Service platform. It lets customers securely view and transact on their own accounts and loans. Compared to staff apps, data is a curated subset appropriate for self-service. Shared KMP modules power business logic across Android, iOS, Desktop, and Web, with Kotlin/Compose UIs providing a streamlined, consistent experience.
+
+> 🔗 **All my merged PRs (auto-updating):**  
+> https://github.com/openMF/mifos-mobile/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin
 
 | No. | PR | Description |
 | --- | --- | --- |
@@ -115,6 +123,9 @@
 - **Sync Capabilities:** Utilities to stay in sync with upstream template changes  
 - **Secrets Management:** Secure handling of keystores and other sensitive artifacts
 
+> 🔗 **All my merged PRs (auto-updating):**  
+> https://github.com/openMF/kmp-project-template/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin
+
 | No. | PR | Description |
 | --- | --- | --- |
 | 1 | [#85](https://github.com/openMF/kmp-project-template/pull/85) | **iOS:** Switch to CocoaPods integration for `cmp-shared`. |
@@ -153,6 +164,9 @@
 
 A standout capability is robust **offline support**, enabling officers to work in remote areas and sync when connectivity returns—so underserved clients can still access essential financial services.
 
+> 🔗 **All my merged PRs (auto-updating):**  
+> https://github.com/openMF/android-client/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin
+
 | No. | PR | Description |
 | --- | --- | --- |
 | 1 | [#2378](https://github.com/openMF/android-client/pull/2378) | Update testers group name used for app distribution (CI). |
@@ -168,6 +182,9 @@ A standout capability is robust **offline support**, enabling officers to work i
 
 **Repo:** [`openMF/mifos-passcode-cmp`](https://github.com/openMF/mifos-passcode-cmp)  
 **About:** A Kotlin Multiplatform library providing secure passcode functionality for Mifos applications. It supports Android, iOS, and desktop apps and enforces passcode lock on resume or inactivity. Released under Apache 2.0, it improves app security and UX consistency across platforms.
+
+> 🔗 **All my merged PRs (auto-updating):**  
+> https://github.com/openMF/mifos-passcode-cmp/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin
 
 | No. | PR | Description |
 | --- | --- | --- |
@@ -189,6 +206,13 @@ A standout capability is robust **offline support**, enabling officers to work i
 [`openMF/mifos-x-actionhub-publish-ios-on-appstore-testflight`](https://github.com/openMF/mifos-x-actionhub-publish-ios-on-appstore-testflight) ·
 [`openMF/mifos-x-actionhub-publish-ios-on-appstore`](https://github.com/openMF/mifos-x-actionhub-publish-ios-on-appstore)  
 **About:** A suite of **reusable GitHub Actions** and workflows that standardize iOS/KMP delivery across Mifos projects: building signed/unsigned iOS apps, distributing to **Firebase App Distribution**, and publishing to **TestFlight**/**App Store** — with improved reliability via **SSH-based Fastlane Match**, clear inputs, and comprehensive documentation. These actions are used by the KMP template and app repos to keep release pipelines consistent and repeatable.
+
+> 🔗 **All my merged PRs (auto-updating):**  
+> https://github.com/openMF/mifos-x-actionhub/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin
+> https://github.com/openMF/mifos-x-actionhub-build-ios-app/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin
+> https://github.com/openMF/mifos-x-actionhub-publish-ios-on-firebase/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin
+> https://github.com/openMF/mifos-x-actionhub-publish-ios-on-appstore-testflight/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin
+> https://github.com/openMF/mifos-x-actionhub-publish-ios-on-appstore/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin
 
 | No. | PR | Repo | Description |
 | --- | --- | --- | --- |
