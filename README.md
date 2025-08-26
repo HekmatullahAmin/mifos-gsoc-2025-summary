@@ -40,6 +40,8 @@
 - [Android Client (Field Officer app)](#android-client)
 - [Mifos Passcode CMP (KMP library)](#mifos-passcode-cmp)
 - [CI/CD – GitHub Actions & Reusable Workflows](#cicd--github-actions--reusable-workflows)
+- [What’s Left to Do](#whats-left-to-do)
+- [Conclusion](#conclusion)
 
 ## Mobile Wallet
 
@@ -248,3 +250,40 @@ A standout capability is robust **offline support**, enabling officers to work i
 
 </div>
 
+## What’s Left to Do
+
+- **Integrate the Mifos Notifications framework** to support **Request-to-Pay (R2P)** and other real-time events.  
+  This was **blocked by missing upstream APIs** (Fineract/PH-EE endpoints for creating/accepting R2P requests and for notification delivery/registration).  
+  Once those services expose the required endpoints, next steps are:
+  - Wire server notifications → FCM on device; add background sync & retry.
+  - Implement full R2P lifecycle (create, accept/decline, cancel) with idempotency and error handling.
+  - Build a unified **Notification Center** UI and deep links to relevant screens.
+  - Add end-to-end tests and update developer docs.
+
+- **Add unit tests** for the remaining modules.
+
+<div align="right">
+  
+[![Back To Top](https://img.shields.io/badge/Back%20To%20Top-Blue?style=flat)](#readme-top)
+
+</div>
+
+## Conclusion
+
+Across my PRs this summer I leveled up in:
+- **Kotlin Multiplatform**: shared modules, `expect/actual`, advanced source-set layouts.
+- **Multi-module MVI architecture** with Compose Multiplatform and a reusable design system.
+- **CI/CD & release engineering**: Fastlane + GitHub Actions; reliable signing/provisioning.
+- **Multi-store releases**: distribution to **Firebase App Distribution**, **TestFlight**, **App Store** (iOS), **Google Play** (Android), and **Mac App Store** (desktop).
+
+In addition to feature work, I actively **reviewed PRs** to help maintain consistency and quality across the ecosystem. Browse my reviews here:
+- **Mifos Mobile:** https://github.com/openMF/Mifos-mobile/pulls?q=is%3Apr+reviewed-by%3AHekmatullahAmin  
+- **Mobile Wallet:** https://github.com/openMF/mobile-wallet/pulls?q=is%3Apr+reviewed-by%3AHekmatullahAmin  
+- **Android Client:** https://github.com/openMF/android-client/pulls?q=is%3Apr+reviewed-by%3AHekmatullahAmin  
+- **KMP Project Template:** https://github.com/openMF/kmp-project-template/pulls?q=is%3Apr+reviewed-by%3AHekmatullahAmin
+
+<div align="right">
+  
+[![Back To Top](https://img.shields.io/badge/Back%20To%20Top-Blue?style=flat)](#readme-top)
+
+</div>
