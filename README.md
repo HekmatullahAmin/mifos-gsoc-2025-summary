@@ -26,6 +26,12 @@
 
 </div>
 
+> [!NOTE]
+> **Accepted GSoC Proposal (Reference)**
+> If you’d like a concrete example of a strong proposal—structure, milestones, risks, and visuals 
+> **[View my accepted GSoC 2025 proposal on Notion »](https://www.notion.so/Making-Mobile-Wallet-Deployment-Ready-For-G2P-and-Merchant-Use-Cases-19c79e3a046e8037ad39ea49981939b4?source=copy_link)**
+> *(Notion may prompt you to sign in.)*
+
 ## Table of Contents
 
 - [Mobile Wallet](#mobile-wallet)
