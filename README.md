@@ -35,7 +35,7 @@
     </a>&nbsp;
     <a href="https://hekmatullahamin.github.io/" target="_blank">
       <img alt="Portfolio"
-           src="https://img.shields.io/static/v1?style=for-the-badge&label=&message=WEBSITE&color=2e7d32&labelColor=374151&logo=google-chrome&logoColor=white">
+           src="https://img.shields.io/static/v1?style=for-the-badge&label=&message=Portfolio&color=2e7d32&labelColor=374151&logo=google-chrome&logoColor=white">
     </a>&nbsp;
     <a href="https://developers.google.com/profile/u/HekmatullahAmin" target="_blank">
       <img alt="Google Developers"
