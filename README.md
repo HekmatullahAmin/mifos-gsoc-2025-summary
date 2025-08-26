@@ -20,6 +20,30 @@
     <img alt="CI/CD" src="https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-2088FF?logo=githubactions&logoColor=white">
   </p>
 
+  <p align="center">
+    <a href="https://www.linkedin.com/in/hekmatullah-amin-713a5b244/" target="_blank">
+      <img alt="LinkedIn"
+           src="https://img.shields.io/static/v1?style=for-the-badge&label=&message=LINKEDIN&color=0A66C2&labelColor=374151&logo=linkedin&logoColor=white">
+    </a>&nbsp;
+    <a href="https://medium.com/@hekmatullahaminullah2" target="_blank">
+      <img alt="Medium"
+           src="https://img.shields.io/static/v1?style=for-the-badge&label=&message=MEDIUM&color=00ab6c&labelColor=374151&logo=medium&logoColor=white">
+    </a>&nbsp;
+    <a href="https://github.com/HekmatullahAmin" target="_blank">
+      <img alt="GitHub"
+           src="https://img.shields.io/static/v1?style=for-the-badge&label=&message=GITHUB&color=24292e&labelColor=374151&logo=github&logoColor=white">
+    </a>&nbsp;
+    <a href="https://hekmatullahamin.github.io/" target="_blank">
+      <img alt="Portfolio"
+           src="https://img.shields.io/static/v1?style=for-the-badge&label=&message=WEBSITE&color=2e7d32&labelColor=374151&logo=google-chrome&logoColor=white">
+    </a>&nbsp;
+    <a href="https://developers.google.com/profile/u/HekmatullahAmin" target="_blank">
+      <img alt="Google Developers"
+           src="https://img.shields.io/static/v1?style=for-the-badge&label=&message=GOOGLE%20DEVELOPERS&color=4285F4&labelColor=374151&logo=google&logoColor=white">
+    </a>
+  </p>
+
+
   <p>
     My GSoC project focused on <b>Making the Mobile Wallet Deployment-Ready for G2P and Merchant Use Cases</b>, but my work extended across multiple repositories to enhance functionality, fix bugs, improve CI/CD, and contribute to the Kotlin Multiplatform ecosystem within Mifos.
   </p>
