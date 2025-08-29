@@ -3,9 +3,10 @@
 
 <div align="center">
 
-  <!-- Hero banner (replace with your actual GIF or image path) -->
-  <img src="https://github.com/user-attachments/assets/6b854ebf-1611-4ee9-bad9-493d700d73e8" alt="Google Summer of Code x Mifos Initiative" width="900" height="400" />
 
+  <!-- Hero banner (replace with your actual GIF or image path) -->
+  <img src="https://github.com/user-attachments/assets/6b854ebf-1611-4ee9-bad9-493d700d73e8" alt="Google Summer of Code x Mifos Initiative" width="900" height="500" />
+  
   <h1>Google Summer of Code 2025 – Contributions to Mifos Initiative</h1>
 
   <p>
@@ -52,9 +53,14 @@
 
 > [!NOTE]
 > **Accepted GSoC Proposal (Reference)**
-> If you’d like a concrete example of a strong proposal—structure, milestones, risks, and visuals 
+> If you’d like a concrete example of a strong proposal—structure, milestones, and visuals 
 > **[View my accepted GSoC 2025 proposal on Notion »](https://www.notion.so/Making-Mobile-Wallet-Deployment-Ready-For-G2P-and-Merchant-Use-Cases-19c79e3a046e8037ad39ea49981939b4?source=copy_link)**
 > *(Notion may prompt you to sign in.)*
+
+> [!TIP]
+> **Org-wide contributions (openMF)**  
+> Quickly browse everything I’ve merged across the organization:  
+> **[All merged PRs by me »](https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin+org%3AopenMF)**
 
 ## Table of Contents
 
@@ -72,8 +78,7 @@
 **Repo:** [`openMF/mobile-wallet`](https://github.com/openMF/mobile-wallet)  
 **About:** A Kotlin Multiplatform (KMP) reference implementation of a digital wallet built on Apache Fineract. It supports Android, iOS, desktop, and web platforms using Compose Multiplatform, Ktor/Ktorfit, and Koin to deliver a clean architecture-based wallet with payment capabilities. Developed for both client and merchant use cases, this wallet is optimized for financial inclusion scenarios and aligned with open digital finance frameworks.
 
-> 🔗 **All my merged PRs (auto-updating):**  
-> https://github.com/openMF/mobile-wallet/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin
+> 🔗 **[View merged PRs »](https://github.com/openMF/mobile-wallet/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin)** _auto-updating_
 
 | No. | PR | Description |
 | --- | --- | --- |
@@ -108,8 +113,7 @@
 **Repo:** [`openMF/Mifos-mobile`](https://github.com/openMF/Mifos-mobile)  
 **About:** A **Kotlin Multiplatform** client for end users, built on the MifosX Self-Service platform. It lets customers securely view and transact on their own accounts and loans. Compared to staff apps, data is a curated subset appropriate for self-service. Shared KMP modules power business logic across Android, iOS, Desktop, and Web, with Kotlin/Compose UIs providing a streamlined, consistent experience.
 
-> 🔗 **All my merged PRs (auto-updating):**  
-> https://github.com/openMF/mifos-mobile/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin
+> 🔗 **[View merged PRs »](https://github.com/openMF/Mifos-mobile/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin)** _auto-updating_
 
 | No. | PR | Description |
 | --- | --- | --- |
@@ -155,8 +159,7 @@
 - **Sync Capabilities:** Utilities to stay in sync with upstream template changes  
 - **Secrets Management:** Secure handling of keystores and other sensitive artifacts
 
-> 🔗 **All my merged PRs (auto-updating):**  
-> https://github.com/openMF/kmp-project-template/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin
+> 🔗 **[View merged PRs »](https://github.com/openMF/kmp-project-template/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin)** _auto-updating_
 
 | No. | PR | Description |
 | --- | --- | --- |
@@ -196,8 +199,7 @@
 
 A standout capability is robust **offline support**, enabling officers to work in remote areas and sync when connectivity returns—so underserved clients can still access essential financial services.
 
-> 🔗 **All my merged PRs (auto-updating):**  
-> https://github.com/openMF/android-client/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin
+> 🔗 **[View merged PRs »](https://github.com/openMF/android-client/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin)** _auto-updating_
 
 | No. | PR | Description |
 | --- | --- | --- |
@@ -215,8 +217,7 @@ A standout capability is robust **offline support**, enabling officers to work i
 **Repo:** [`openMF/mifos-passcode-cmp`](https://github.com/openMF/mifos-passcode-cmp)  
 **About:** A Kotlin Multiplatform library providing secure passcode functionality for Mifos applications. It supports Android, iOS, and desktop apps and enforces passcode lock on resume or inactivity. Released under Apache 2.0, it improves app security and UX consistency across platforms.
 
-> 🔗 **All my merged PRs (auto-updating):**  
-> https://github.com/openMF/mifos-passcode-cmp/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin
+> 🔗 **[View merged PRs »](https://github.com/openMF/mifos-passcode-cmp/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin)** _auto-updating_
 
 | No. | PR | Description |
 | --- | --- | --- |
@@ -239,12 +240,12 @@ A standout capability is robust **offline support**, enabling officers to work i
 [`openMF/mifos-x-actionhub-publish-ios-on-appstore`](https://github.com/openMF/mifos-x-actionhub-publish-ios-on-appstore)  
 **About:** A suite of **reusable GitHub Actions** and workflows that standardize iOS/KMP delivery across Mifos projects: building signed/unsigned iOS apps, distributing to **Firebase App Distribution**, and publishing to **TestFlight**/**App Store** — with improved reliability via **SSH-based Fastlane Match**, clear inputs, and comprehensive documentation. These actions are used by the KMP template and app repos to keep release pipelines consistent and repeatable.
 
-> 🔗 **All my merged PRs (auto-updating):**  
-> https://github.com/openMF/mifos-x-actionhub/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin
-> https://github.com/openMF/mifos-x-actionhub-build-ios-app/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin
-> https://github.com/openMF/mifos-x-actionhub-publish-ios-on-firebase/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin
-> https://github.com/openMF/mifos-x-actionhub-publish-ios-on-appstore-testflight/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin
-> https://github.com/openMF/mifos-x-actionhub-publish-ios-on-appstore/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin
+> 🔗 **All my merged PRs (auto-updating)**
+> - **mifos-x-actionhub:** [View merged PRs »](https://github.com/openMF/mifos-x-actionhub/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin)
+> - **mifos-x-actionhub-build-ios-app:** [View merged PRs »](https://github.com/openMF/mifos-x-actionhub-build-ios-app/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin)
+> - **mifos-x-actionhub-publish-ios-on-firebase:** [View merged PRs »](https://github.com/openMF/mifos-x-actionhub-publish-ios-on-firebase/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin)
+> - **mifos-x-actionhub-publish-ios-on-appstore-testflight:** [View merged PRs »](https://github.com/openMF/mifos-x-actionhub-publish-ios-on-appstore-testflight/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin)
+> - **mifos-x-actionhub-publish-ios-on-appstore:** [View merged PRs »](https://github.com/openMF/mifos-x-actionhub-publish-ios-on-appstore/pulls?q=is%3Apr+is%3Amerged+author%3AHekmatullahAmin)
 
 | No. | PR | Repo | Description |
 | --- | --- | --- | --- |
